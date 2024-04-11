@@ -62,7 +62,11 @@ p {
 
 @media (max-width: 767px) {
   h1 {
-    font-size: 24px !important;
+    font-size: 18px !important;
+    text-align: center;
+  }
+  article p {
+    text-align: justify;
   }
 }
 
@@ -135,7 +139,7 @@ p {
 
 .breadcrumbs-wrapper span,
 .breadcrumbs-wrapper span a {
-  color: #a69996;
+  color: #1c2642;
   display: inline-block;
   font-size: 12px;
   font-weight: 400;
@@ -148,9 +152,6 @@ p {
 .breadcrumbs-wrapper span a:hover {
   color: #1a1555;
   text-decoration: underline;
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
 }
 
 /*-------------------- AUTHOR BIO*/
@@ -248,7 +249,7 @@ p {
 
 .author-date,
 .author-date span {
-  color: #a69996;
+  color: #1c2642;
   font-size: 12px;
   line-height: 150%;
   font-weight: 400;
@@ -256,6 +257,19 @@ p {
 
 .author-date span {
   text-transform: uppercase;
+}
+
+/*-------------------- RESPONSIVE AUTHOR BIO*/
+
+@media (max-width: 767px) {
+  .author-disclaimer {
+    margin-top: 10px;
+    margin-left: 0 !important;
+  }
+  .author-container {
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
 /*-------------------- DISCLAIMER*/
@@ -371,23 +385,28 @@ p {
 }
 
 .deposit-bonus__heading {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
   margin-top: 4px;
   margin-bottom: 0;
   text-decoration: none;
   color: #444b54;
 }
+.deposit-bonus__heading {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+}
 
 .deposit-bonus__condition {
-  font-size: 20px;
-  font-weight: 700;
   line-height: 120%;
   margin-bottom: 4px;
   letter-spacing: -0.02em;
   text-transform: capitalize;
   color: #1c2642;
+}
+.deposit-bonus__condition p {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 0px;
 }
 
 .deposit-bonus__benefits li {
@@ -424,6 +443,50 @@ p {
 
 .deposit-bonus__btn:hover {
   background-color: #1cb48f;
+}
+
+/*-------------------- RESPONSIVE DEPOSIT BONUS*/
+
+@media (max-width: 767px) {
+  .deposit-bonus__column {
+    padding-right: 0%;
+  }
+
+  .deposit-bonus__column:nth-child(3) img {
+    width: 82px;
+    margin: 0 auto;
+  }
+
+  .deposit-bonus__column:nth-child(4) {
+    padding-right: 0%;
+  }
+
+  .deposit-bonus__container {
+    flex-direction: column;
+  }
+  .deposit-bonus__heading {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .deposit-bonus__container img {
+    width: 100%;
+    height: auto;
+  }
+  .deposit-bonus__condition p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 0px;
+  }
+  .deposit-bonus__points {
+    margin-bottom: 0px;
+  }
+  .deposit-bonus__btn {
+    width: 100%;
+    margin-top: 20px;
+  }
 }
 /* ------------------------------------------------------------------FOOTER*/
 
