@@ -230,7 +230,7 @@ p {
   height: 21px;
   justify-content: center;
   width: 21px;
-  background-image: url('/images/icons/author-label-icon.svg');
+  background-image: url('images/icons/author-label-icon.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -290,7 +290,7 @@ p {
 }
 
 .disclaimer-btn__heading {
-  background-image: url('/images/icons/info.svg');
+  background-image: url('images/icons/info.svg');
 }
 
 .disclaimer-btn__tooltip {
@@ -395,7 +395,7 @@ p {
   font-size: 14px;
   line-height: 21px;
   padding: 0 0 2px 20px;
-  background: url('/images/icons/checkmarks.svg') left 5px no-repeat;
+  background: url('images/icons/checkmarks.svg') left 5px no-repeat;
 }
 
 .deposit-bonus__points {
