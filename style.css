@@ -62,11 +62,15 @@ p {
 
 @media (max-width: 767px) {
   h1 {
-    font-size: 18px !important;
+    font-size: 20px !important;
+    line-height: 22px;
     text-align: center;
   }
   article p {
     text-align: justify;
+  }
+  .header__nav {
+    display: none !important;
   }
 }
 
@@ -342,6 +346,14 @@ p {
   visibility: visible;
   opacity: 1;
   top: calc(100% + 10px);
+}
+
+/*-------------------- RESPONSIVE DISCLAIMER*/
+
+@media (max-width: 767px) {
+  .disclaimer-btn__tooltip::after {
+    top: -15px;
+  }
 }
 
 /* ------------------------------------------------------------------DEPOSIT BONUS*/
