@@ -62,9 +62,9 @@ p {
 
 @media (max-width: 767px) {
   h1 {
-    font-size: 20px !important;
-    line-height: 22px;
-    text-align: center;
+    font-size: 24px !important;
+    line-height: 30px !important;
+    text-align: left;
   }
   article p {
     text-align: justify;
@@ -235,7 +235,7 @@ p {
   height: 21px;
   justify-content: center;
   width: 21px;
-  background-image: url('images/icons/author-label-icon.svg');
+  background-image: url('./images/icons/author-label-icon.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -269,10 +269,19 @@ p {
   .author-disclaimer {
     margin-top: 10px;
     margin-left: 0 !important;
+    margin-right: auto !important;
   }
   .author-container {
     justify-content: center;
     flex-direction: column;
+  }
+  .author-bio {
+    border-bottom: none;
+  }
+  .author-left {
+    width: 100%;
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 10px;
   }
 }
 
@@ -308,7 +317,7 @@ p {
 }
 
 .disclaimer-btn__heading {
-  background-image: url('images/icons/info.svg');
+  background-image: url('./images/icons/info.svg');
 }
 
 .disclaimer-btn__tooltip {
@@ -354,6 +363,13 @@ p {
   .disclaimer-btn__tooltip::after {
     top: -15px;
   }
+  .disclaimer-btn__tooltip {
+    max-width: 240px;
+    left: 100%;
+  }
+  .disclaimer-btn__tooltip::after {
+    left: 10%;
+  }
 }
 
 /* ------------------------------------------------------------------DEPOSIT BONUS*/
@@ -377,6 +393,7 @@ p {
   padding-right: 3%;
   flex: 1;
   flex-direction: column;
+  margin-bottom: 16px;
 }
 
 .deposit-bonus__column:nth-child(2) {
@@ -395,7 +412,9 @@ p {
 .deposit-bonus__column:nth-child(4) {
   padding-right: 0%;
 }
-
+.deposit-bonus__points-mobile {
+  display: none;
+}
 .deposit-bonus__heading {
   margin-top: 4px;
   margin-bottom: 0;
@@ -408,14 +427,16 @@ p {
   line-height: 18px;
 }
 
-.deposit-bonus__condition {
+.deposit-bonus__condition,
+.deposit-bonus__condition-mobile {
   line-height: 120%;
   margin-bottom: 4px;
   letter-spacing: -0.02em;
   text-transform: capitalize;
   color: #1c2642;
 }
-.deposit-bonus__condition p {
+.deposit-bonus__condition p,
+.deposit-bonus__condition-mobile p {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 0px;
@@ -426,7 +447,7 @@ p {
   font-size: 14px;
   line-height: 21px;
   padding: 0 0 2px 20px;
-  background: url('images/icons/checkmarks.svg') left 5px no-repeat;
+  background: url('./images/icons/checkmarks.svg') left 5px no-repeat;
 }
 
 .deposit-bonus__points {
@@ -457,16 +478,56 @@ p {
   background-color: #1cb48f;
 }
 
+.deposit-bonus__condition-mobile {
+  display: none;
+}
 /*-------------------- RESPONSIVE DEPOSIT BONUS*/
 
 @media (max-width: 767px) {
-  .deposit-bonus__column {
-    padding-right: 0%;
+  .deposit-bonus__column:nth-child(2) {
+    order: 2;
   }
 
-  .deposit-bonus__column:nth-child(3) img {
-    width: 82px;
-    margin: 0 auto;
+  .deposit-bonus__condition {
+    display: none;
+  }
+  .deposit-bonus__condition-mobile {
+    display: block;
+  }
+  .deposit-bonus__logo img {
+    width: 125px;
+  }
+
+  .deposit-bonus__heading {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    top: 0;
+    margin: 25px 0px;
+  }
+
+  .deposit-bonus__column {
+    padding-right: 0%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    position: relative;
+  }
+
+  .deposit-bonus__points-mobile {
+    position: absolute;
+    justify-self: end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    top: 0;
+    right: 0;
+  }
+
+  .deposit-bonus__column:nth-child(3) {
+    display: none;
   }
 
   .deposit-bonus__column:nth-child(4) {
@@ -476,28 +537,22 @@ p {
   .deposit-bonus__container {
     flex-direction: column;
   }
-  .deposit-bonus__heading {
-    font-size: 24px;
-    text-align: center;
-    font-weight: 700;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  .deposit-bonus__container img {
-    width: 100%;
-    height: auto;
-  }
-  .deposit-bonus__condition p {
-    text-align: center;
-    font-size: 18px;
+
+  .deposit-bonus__condition p,
+  .deposit-bonus__condition-mobile p {
+    text-align: left;
     margin-bottom: 0px;
+    font-size: 18px;
+    line-height: 25px;
   }
   .deposit-bonus__points {
     margin-bottom: 0px;
+    font-size: 16px;
+    line-height: 22px;
   }
   .deposit-bonus__btn {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 }
 /* ------------------------------------------------------------------FOOTER*/
